@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlotlego Edmund Setshogoe - Professional Portfolio</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #2980b9;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: #34495e;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .profile-header {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-name {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Professional Summary */
+        .summary {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-weight: 600;
+        }
+
+        .job-date {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .company {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #7f8c8d;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #ecf0f1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Education Section */
+        .education-item {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Projects Section */
+        .project-item {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* References Section */
+        .references-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .reference-item {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .reference-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .reference-position {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .reference-contact {
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-name {
+                font-size: 2.2rem;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .job-date {
+                margin-top: 10px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="profile-header">
+                <h1 class="profile-name">Tlotlego Edmund Setshogoe</h1>
+                <p class="profile-title">IT Student & Hospitality Professional</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>+27 82 293 2321</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <span>tesetshogoe@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section id="summary">
+        <div class="container">
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                <p>I started my work career in the retail industry as a Sales Associate. Later on, I found a career path within the hospitality industry at the Sierra Burgers Park hotel. I believe my previous work experience within these sectors will enable me to excel on a professional level.</p>
+                <p>Last but not least, I am currently studying for a BSC degree in IT at Richfield College.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Part-Time Driver</h3>
+                    <span class="job-date">Aug 2025 - Current</span>
+                </div>
+                <p class="company">Work is done in a private capacity</p>
+                <ul>
+                    <li>Transport items to second hand shops</li>
+                    <li>Transport the person to various places to complete admin tasks</li>
+                    <li>Assist the individual to carry heavy items</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Fieldworker</h3>
+                    <span class="job-date">Feb 2022 - April 2022</span>
+                </div>
+                <p class="company">Statistics South Africa, Pretoria</p>
+                <ul>
+                    <li>Contribute to the total count of the country's population in the Pretoria area</li>
+                    <li>Consult with Fieldwork Supervisor on issues that I am unable to resolve during fieldwork activity</li>
+                    <li>Keep the materials for Census 2022 safe and secure at all times</li>
+                    <li>Use tablets to capture data of household members in my area of residence</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Hotel Porter</h3>
+                    <span class="job-date">Mar 2017 - Nov 2020</span>
+                </div>
+                <p class="company">Sierra Burgers Park Hotel, Pretoria</p>
+                <ul>
+                    <li>Arrange hotel shuttle services, cabs and tours for the hotel's guests</li>
+                    <li>Assist the hotel receptionists to check-in and check-out guests</li>
+                    <li>Assign shuttle trips to each driver on duty</li>
+                    <li>Promote the room amenities to the guests</li>
+                    <li>Enter the guest's profiles on to the PMS software system</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">Sales Associate</h3>
+                    <span class="job-date">Oct 2012 - Oct 2016</span>
+                </div>
+                <p class="company">CUM Books, Pretoria</p>
+                <ul>
+                    <li>Count and receive new merchandise on the point of sale system</li>
+                    <li>Count the float money at the start of each shift</li>
+                    <li>Complete the cash-up procedure at the end of each shift</li>
+                    <li>Process customer sales transactions on the point of sale system</li>
+                    <li>Customer product assistance and stock taking</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <h3 class="job-title">In-Service Trainee</h3>
+                    <span class="job-date">Oct 2011 - Jan 2012</span>
+                </div>
+                <p class="company">Town Lodge Polokwane Hotel</p>
+                <h4>Front Office Department</h4>
+                <ul>
+                    <li>Check-in and check-out guests</li>
+                    <li>Print arrival and departure lists</li>
+                    <li>Conduct the direct billing of accommodation vouchers</li>
+                    <li>Create private and corporate bookings</li>
+                    <li>Charge guests for the usage of hotel services</li>
+                    <li>File and attach guest registration cards and invoices</li>
+                </ul>
+                
+                <h4>Beverage Department</h4>
+                <ul>
+                    <li>Serve alcoholic and non-alcoholic beverages to hotel guests</li>
+                    <li>Conduct daily stocktaking of beverages</li>
+                    <li>Process sales transactions on the PMS software system</li>
+                </ul>
+                
+                <h4>Housekeeping Department</h4>
+                <ul>
+                    <li>Clean 15 rooms on a daily basis</li>
+                    <li>Replace guest toiletries and room amenities</li>
+                    <li>Replace room linen and duvets</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Professional Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Excellent Time Management</span>
+                        <span class="skill-tag">Communication Skills</span>
+                        <span class="skill-tag">Customer Service</span>
+                        <span class="skill-tag">Data Collection</span>
+                        <span class="skill-tag">Hospitality Services</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">MS Word</span>
+                        <span class="skill-tag">MS Excel</span>
+                        <span class="skill-tag">MS PowerPoint</span>
+                        <span class="skill-tag">Microsoft Office Suite</span>
+                        <span class="skill-tag">PMS Software Systems</span>
+                        <span class="skill-tag">Point of Sale Systems</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Code 8 Driver's Licence</span>
+                        <span class="skill-tag">Transportation Services</span>
+                        <span class="skill-tag">Stock Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>BSC in Information Technology</h3>
+                <p><strong>Richfield College</strong> - Current</p>
+            </div>
+            <div class="education-item">
+                <h3>BTech in Tourism Management</h3>
+                <p><strong>Tshwane University of Technology</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects -->
+    <section id="projects">
+        <div class="container">
+            <h2>Personal Projects</h2>
+            <div class="project-item">
+                <div class="job-header">
+                    <h3 class="job-title">Volunteer</h3>
+                    <span class="job-date">2021 - Present</span>
+                </div>
+                <p class="company">Hennops Revival NPO, Centurion</p>
+                <ul>
+                    <li>Assist the non-profit organisation to conduct river clean ups around my area of residence</li>
+                    <li>The organisation is extremely passionate about the environmental conservation of our country's rivers</li>
+                    <li>The organisation conducts a successful waste management program in collaboration with various stakeholders</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references">
+        <div class="container">
+            <h2>References</h2>
+            <div class="references-container">
+                <div class="reference-item">
+                    <h3 class="reference-name">Hilda Mphahlele</h3>
+                    <p class="reference-position">Ex Colleague - CUM Books</p>
+                    <div class="reference-contact">
+                        <p>📧 mphahleletebog0170@gmail.com</p>
+                        <p>📱 079 291 2964</p>
+                    </div>
+                </div>
+                
+                <div class="reference-item">
+                    <h3 class="reference-name">Tarryn Johnston</h3>
+                    <p class="reference-position">Executive Director - Hennops Revival NPO</p>
+                    <div class="reference-contact">
+                        <p>📧 tarryn@hennopsrevival.co.za</p>
+                        <p>📱 082 460 2899</p>
+                    </div>
+                </div>
+                
+                <div class="reference-item">
+                    <h3 class="reference-name">Kagiso Molefe</h3>
+                    <p class="reference-position">Ex Colleague - Burgers Park Hotel</p>
+                    <div class="reference-contact">
+                        <p>📱 +27 71 558 5210</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tlotlego Edmund Setshogoe. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
